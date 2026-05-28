@@ -1,0 +1,22 @@
+{
+    "plone_version": "6.2.0",
+    "container_registry": "github",
+    "hostname": "intranet.v2solucoes.com.br",
+    "description": "Intranet utilizando Plone 6.2",
+    "python_package_name": "v2tec.intranet",
+    "author": "tadeu",
+    "devops_gha_deploy": false,
+    "devops_storage": "relstorage",
+    "project_slug": "intranet-v2tec",
+    "frontend_addon_name": "volto-v2tec-intranet",
+    "volto_version": "19.0.0",
+    "github_organization": "tadeuneto2",
+    "title": "Intranet V2Tec",
+    "use_prerelease_versions": false,
+    "devops_cache": false,
+    "language_code": "pt-br",
+    "email": "tadeu.infor@gmail.com",
+    "initialize_documentation": false,
+    "devops_ansible": false,
+    "__template__": "project"
+}
