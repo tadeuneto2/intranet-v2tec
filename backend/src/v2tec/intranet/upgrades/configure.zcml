@@ -9,7 +9,7 @@
       destination="20260527001"
       >
     <genericsetup:upgradeDepends
-        title="Alterar timezone para america/sao_paulo"
+        title="Altera timezone para America/Sao_Paulo"
         import_steps="plone.app.registry"
         />
   </genericsetup:upgradeSteps>
@@ -29,6 +29,18 @@
         />
   </genericsetup:upgradeSteps>
 
-  <!-- -*- extra stuff goes here -*- -->
-
+  <genericsetup:upgradeSteps
+      profile="v2tec.intranet:default"
+      source="20260528001"
+      destination="20260528002"
+      >
+    <genericsetup:upgradeDepends
+        title="Adiciona o tipo Área"
+        import_steps="typeinfo"
+        />
+    <genericsetup:upgradeDepends
+        title="Aplica permissionamento para tipo de conteúdo Área"
+        import_steps="rolemap"
+        />
+  </genericsetup:upgradeSteps>
 </configure>
