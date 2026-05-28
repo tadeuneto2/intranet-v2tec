@@ -21,7 +21,7 @@ class TestPortalSettings:
             ["plone.default_language", "pt-br"],
         ],
     )
-    def test_setting(self, portal, key: str, expected: str | int):
+    def test_setting(self, portal_class, key: str, expected: str | int):
         """Test registry setting."""
         value = api.portal.get_registry_record(key)
         assert value == expected
