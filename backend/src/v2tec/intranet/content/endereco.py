@@ -1,8 +1,6 @@
 from plone.dexterity.content import Container
-from plone.schema.email import Email
 from plone.supermodel import model
 from v2tec.intranet import _
-from v2tec.intranet.utils import validadores
 from zope import schema
 from zope.interface import implementer
 
@@ -39,9 +37,10 @@ class IEndereco(model.Schema):
         description=_("Informe a cidade do endereço de contato"),
         required=False,
     )
-    estado = schema.TextLine(
+    estado = schema.Choice(
         title=_("Estado"),
         description=_("Informe o estado do endereço de contato"),
+        vocabulary="v2tec.intranet.vocabulary.estados",
         required=False,
     )
     cep = schema.TextLine(

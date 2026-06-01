@@ -10,26 +10,17 @@ const EnderecoInfo: React.FC<ContactInfoProps> = ({ content }) => {
   const { endereco, complemento, cidade, estado, cep } = content;
 
   return (
-    <Container narrow className="contato">
-      <Container className="">
-        <span className="label">Endereco</span>:{' '}
-        <span className="value">{endereco}</span>
-      </Container>
-      <Container className="">
-        <span className="label">Complemento</span>:{' '}
-        <span className="value">{complemento}</span>
-      </Container>
-      <Container className="">
-        <span className="label">Cidade</span>:{' '}
-        <span className="value">{cidade}</span>
-      </Container>
-      <Container className="">
-        <span className="label">Estado</span>:{' '}
-        <span className="value">{estado}</span>
-      </Container>
-      <Container className="">
-        <span className="label">CEP</span>: <span className="value">{cep}</span>
-      </Container>
+    <Container narrow>
+      {cidade && estado && (
+        <Container>
+          <span className="label">Endereço</span>:{' '}
+          <span className="cidade">{cep}</span> {' - '}
+          <span className="cidade">{endereco}</span>{' '}
+          <span className="cidade">{complemento}</span>{' '}
+          <span className="cidade">{cidade}</span> {' / '}
+          <span className="estado">{estado.token}</span>
+        </Container>
+      )}
     </Container>
   );
 };

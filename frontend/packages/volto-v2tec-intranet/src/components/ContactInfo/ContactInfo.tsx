@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container } from '@plone/components';
 import type { Area } from 'volto-v2tec-intranet/types/content';
+import EnderecoInfo from './Endereco';
 
 interface ContactInfoProps {
   content: Area;
@@ -21,6 +22,8 @@ const ContactInfo: React.FC<ContactInfoProps> = ({ content }) => {
           <a href={`mailto:${email}`}>{email}</a>
         </span>
       </Container>
+
+      <EnderecoInfo content={content} />
     </Container>
   );
 };
