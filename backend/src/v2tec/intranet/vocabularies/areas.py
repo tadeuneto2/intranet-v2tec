@@ -6,9 +6,7 @@ from zope.schema.interfaces import IVocabularyFactory
 @provider(IVocabularyFactory)
 def vocab_areas(context) -> StaticCatalogVocabulary:
     """Áreas da V2Tec."""
-    return StaticCatalogVocabulary(
-        {
-            "portal_type": ["Area"],
-            "sort_on": "sortable_title",
-        }
-    )
+    return StaticCatalogVocabulary({
+        "portal_type": ["Area"],
+        "sort_on": "sortable_title",
+    })

@@ -1,6 +1,7 @@
 from plone import api
 from plone.indexer import indexer
-from v2tec.intranet.content.pessoa import IPessoa, Pessoa
+from v2tec.intranet.content.pessoa import IPessoa
+from v2tec.intranet.content.pessoa import Pessoa
 from z3c.relationfield.relation import RelationValue
 
 
