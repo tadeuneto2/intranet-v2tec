@@ -1,0 +1,21 @@
+<configure xmlns="http://namespaces.zope.org/zope">
+
+  <subscriber
+      for="v2tec.intranet.content.area.IArea
+           zope.lifecycleevent.IObjectAddedEvent"
+      handler=".area.added"
+      />
+
+  <subscriber
+      for="v2tec.intranet.content.area.IArea
+           zope.lifecycleevent.IObjectModifiedEvent"
+      handler=".area.modified"
+      />
+
+  <subscriber
+      for="*
+           zope.interface.interfaces.IObjectEvent"
+      handler=".log.rastreador_de_eventos_generico"
+      />
+
+</configure>
